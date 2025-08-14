@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz – Irregular Verbs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.webmanifest">
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz &ndash; Irregular Verbs</h1>
+    <div class="field-group">
+      <label for="pseudo">Pseudo :</label>
+      <input type="text" id="pseudo" placeholder="Entrez votre pseudo">
+    </div>
+    <div class="question">
+      <p>Donne les formes de « <span id="base-verb"></span> » :</p>
+    </div>
+    <div class="answers">
+      <div class="field-group">
+        <label for="past">Prétérit :</label>
+        <input type="text" id="past">
+      </div>
+      <div class="field-group">
+        <label for="participle">Participe passé :</label>
+        <input type="text" id="participle">
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="validateBtn">Valider</button>
+      <button id="newBtn">Nouveau</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+    <div id="feedback" class="feedback"></div>
+    <div class="progress-container">
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
+    <div id="progress-text">0 / 0 (0%)</div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
